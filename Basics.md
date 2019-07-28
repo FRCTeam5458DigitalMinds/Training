@@ -6,12 +6,12 @@ Comments are lines in code that act as notes or headers, where they have no effe
 
 ## Includes:
 Includes are header files that are stated at the beginning of the code.
-1. For example, #include <iostream>, instructs the preprocessor to include a section of standard C++ code, called header iostream, that allows it to perform input and output operations.
+1. #include <iostream> instructs the preprocessor to include a section of standard C++ code, called header iostream, that allows it to perform input and output operations.
 ### Include Statement Examples:
-- #include <string>
-- #include <sstream>
+- #include<string>
+- #include<sstream>
 - #include <Robot.h>
-- #include <iostream>
+- #include<iostream>
 - #include <WPILib.h>
 - #include <stdlib.h>
 - #include <frc/Timer.h>
