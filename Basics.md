@@ -13,7 +13,7 @@ Variables act as containers of values, similar to in math. There are different v
 
 ## Declaring a Variable:  
 Declaring a variable basically means giving it a name and a value. The *syntax* or format is the same for all variables.  
-Syntax: **type of variable** *space* **name for variable** *space* **=** *space* **vaule;** 
+Syntax: **type of variable** *space* **name for variable** *space* **=** *space* **vaule;**  
 Examples:  
 - int speed = 5;  
 - float rotation = 2.25;  
