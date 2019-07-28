@@ -18,7 +18,12 @@ Examples:
 - int speed = 5;  
 - float rotation = 2.25;  
 - bool isActive = true;  
-*Notice how all lines of code end in a semicolon, with the exception being comments.*
+*Notice how all lines of code end in a semicolon, with the exception being comments.*  
+
+## File Formatting:
+Each programming file is divided into sections. The file will be automatically divided into these sections if it is created using FRC VS Code. At the *very beginning* of the document before anything else you have include statements, which are mentioned below. After that there is the line:  
+**class Robot : public frc::IterativeRobot**  
+followed by brackets **{ }**  that contain the rest of the code.
 
 ## Includes:
 Includes are header files that are stated at the beginning of the code.
