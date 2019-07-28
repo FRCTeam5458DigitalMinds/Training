@@ -13,7 +13,7 @@ Variables act as containers of values, similar to in math. There are different v
 
 ## Declaring a Variable:  
 Declaring a variable basically means giving it a name and a value. The *syntax* or format is the same for all variables.  
-Syntax: **type of variable** *space* **name for variable** *space* **=** *space* **vaule;**  
+Syntax: **type of variable** *space* **name for variable** *space* **=** *space* **value;**  
 Examples:  
 - int speed = 5;  
 - float rotation = 2.25;  
@@ -22,7 +22,7 @@ Examples:
 
 ## File Formatting:
 Each programming file is divided into sections. The file will be automatically divided into these sections if it is created using FRC VS Code. At the *very beginning* of the document before anything else you have include statements, which are mentioned below. After that there is the line:  
-**class Robot : public frc::IterativeRobot**  
+**class Robot : public frc::TimedRobot**  
 followed by brackets **{ }**  that contain the rest of the code.
 
 ## Includes:
@@ -42,4 +42,6 @@ Includes are header files that are stated at the beginning of the code.
 - #include <frc/ADXRS450_Gyro.h>
 - #include <frc/Solenoid.h>
 - #include <frc/smartdashboard/SmartDashboard.h>
+  
+## Void Function
 
