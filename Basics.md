@@ -27,9 +27,15 @@ In a robot, the code is put onto the roboRIO which is essentially a computer tha
 frc::PowerDistributionPanel pdp{0};  
 - **Gyroscope** (aka Gyro) gives the bot rotational orientation, which helps it move in a straight line:  
 frc::ADXRS450_Gyro Gyro{};  
+*It's worth noting that the gyroscope could be a different type and therefore have a different name.*
 - **Driver Station Controllers** are the three basic controllers we use: A race wheel for steering, a joystick for accellerating, and an Xbox controller for operating things such as intake:  
 frc::Joystick JoyAccel1{0}, Xbox{1}, RaceWheel{2};  
-*IMPORTANT: The numbers following each controller have to match the numbers given to each controller in Driver Station (software that reads controller input).*
+*IMPORTANT: The numbers following each controller have to match the numbers given to each controller in Driver Station (software that reads controller input).*  
+- **Motors** are not themselves programmable, so we use motor *controllers* to control them. There are two different types: *Talons* and *Victors*. We use two pieces of information to declare them, physical location and number.
+- WPI_TalonSRX RightMotorOne{5};
+- WPI_VictorSPX LeftMotorTwo{7};
+- VictorSPX CargoIntakeMotor{4};
+First you put the appropriate type on controller, followed by its physical location, and then the number that is on the controller itself or the motor it is connected to.  
 
 ## Includes:
 Includes are header files that are stated at the beginning of the code.
