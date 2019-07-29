@@ -29,6 +29,7 @@ frc::PowerDistributionPanel pdp{0};
 frc::ADXRS450_Gyro Gyro{};  
 - **Driver Station Controllers** are the three basic controllers we use: A race wheel for steering, a joystick for accellerating, and an Xbox controller for operating things such as intake:  
 frc::Joystick JoyAccel1{0}, Xbox{1}, RaceWheel{2};  
+*IMPORTANT: The numbers following each controller have to match the numbers given to each controller in Driver Station (software that reads controller input).*
 
 ## Includes:
 Includes are header files that are stated at the beginning of the code.
