@@ -8,7 +8,7 @@ Comments are lines in code that act as notes or headers, where they have no effe
 Variables act as containers of values, similar to in math. There are different variables for different types of data, but the main ones we use are **int, float, and bool.**  
 1. **int** is used to store an integer, a whole number that can be either positive or negative.  
 2. **float** is used to store a positive or negative number with a decimal.  
-3. **bool** is used to store a true/false value. (Bool is short for boolean, but that doesn't really matter)  
+3. **bool** is used to store a true/false value. (bool is short for boolean, but that doesn't really matter)  
 4. As a side note, sometimes we use a double in place of a float if we want to store more decimal places (usually used for precise values).  
 
 ## Declaring a Variable:  
@@ -21,7 +21,7 @@ Examples:
 *Notice how all lines of code end in a semicolon, with the exception being comments.*  
 
 ## Declaring Physical Components:  
-In a robot, the code is put onto the roboRIO which is essentially a computer that controls other physical components on the bot. These components are treated in code as if they are variables, allowing you to give them names (for example: RightMotorOne). Almost every component is slightly different, so here examples for the main components:  
+In a robot, the code is put onto the roboRIO which is essentially a computer that controls other physical components on the bot. These components are treated in code as if they are variables, allowing you to give them names (for example: RightMotorOne). Almost every component is slightly different, so here are examples for the main components:  
   
 - **Power Distribution Panel** (aka PDP) distributes power from the battery to various components:  
 **frc::PowerDistributionPanel pdp{0};**  
@@ -39,7 +39,7 @@ First you put the appropriate type of controller, followed by its physical locat
 
 ## 1st Section of Code - Include Statements:
 Include files (aka includes) are header files that are stated at the beginning of the code. No code comes before include statements and they are not contained in brackets.
-1. #include <iostream> instructs the preprocessor to include a section of standard C++ code, called header iostream, that allows it to perform input and output operations. These give allows you to write code specific to a component, for example "#include <frc/Joystick.h>" allows you to write code to recognize joystick input.
+1. #include <iostream> instructs the preprocessor to include a section of standard C++ code, called header iostream, that allows it to perform input and output operations. These allow you to write code specific to a component, for example "#include <frc/Joystick.h>" allows you to write code to recognize joystick input.
 ### Include Statement Examples:
 - #include <string>
 - #include <sstream>
