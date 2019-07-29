@@ -20,10 +20,15 @@ Examples:
 - bool isActive = true;  
 *Notice how all lines of code end in a semicolon, with the exception being comments.*  
 
-## File Formatting:
-Each programming file is divided into sections. The file will be automatically divided into these sections if it is created using FRC VS Code. At the *very beginning* of the document before anything else you have include statements, which are mentioned below. After that there is the line:  
-**class Robot : public frc::TimedRobot**  
-followed by brackets **{ }**  that contain the rest of the code.
+## Declaring Physical Components:  
+In a robot, the code is put onto the roboRIO which is essentially a computer that controls other physical components on the bot. These components are treated in code as if they are variables, allowing you to give them names (for example: RightMotorOne). Almost every component is slightly different, so here examples for the main components:  
+  
+- **Power Distribution Panel** (aka PDP) distributes power from the battery to various components:  
+frc::PowerDistributionPanel pdp{0};  
+- **Gyroscope** (aka Gyro) gives the bot rotational orientation, which helps it move in a straight line:  
+frc::ADXRS450_Gyro Gyro{};  
+- **Driver Station Controllers** are the three basic controllers we use: A race wheel for steering, a joystick for accellerating, and an Xbox controller for operating things such as intake:  
+frc::Joystick JoyAccel1{0}, Xbox{1}, RaceWheel{2};  
 
 ## Includes:
 Includes are header files that are stated at the beginning of the code.
