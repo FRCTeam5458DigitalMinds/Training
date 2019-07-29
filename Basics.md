@@ -31,15 +31,15 @@ frc::ADXRS450_Gyro Gyro{};
 - **Driver Station Controllers** are the three basic controllers we use: A race wheel for steering, a joystick for accellerating, and an Xbox controller for operating things such as intake:  
 frc::Joystick JoyAccel1{0}, Xbox{1}, RaceWheel{2};  
 *IMPORTANT: The numbers following each controller have to match the numbers given to each controller in Driver Station (software that reads controller input).*  
-- **Motors** are not themselves programmable, so we use motor *controllers* to control them. There are two different types: *Talons* and *Victors*. We use two pieces of information to declare them, physical location and number.
-- WPI_TalonSRX RightMotorOne{5};
-- WPI_VictorSPX LeftMotorTwo{7};
-- VictorSPX CargoIntakeMotor{4};
+- **Motors** are not themselves programmable, so we use motor *controllers* to control them. There are two different types: *Talons* and *Victors*. We use two pieces of information to declare them, physical location and number.  
+WPI_TalonSRX RightMotorOne{5};  
+WPI_VictorSPX LeftMotorTwo{7};  
+VictorSPX CargoIntakeMotor{4};  
 First you put the appropriate type on controller, followed by its physical location, and then the number that is on the controller itself or the motor it is connected to.  
 
-## Includes:
-Includes are header files that are stated at the beginning of the code.
-1. #include <iostream> instructs the preprocessor to include a section of standard C++ code, called header iostream, that allows it to perform input and output operations.
+## First Lines of Code - Includes:
+Includes are header files that are stated at the beginning of the code. No code comes before include statements and they are not contained in brackets.
+1. #include <iostream> instructs the preprocessor to include a section of standard C++ code, called header iostream, that allows it to perform input and output operations. These give allows you to write code specific to a component, for example "#include <frc/Joystick.h>" allows you to write code to recognize joystick input.
 ### Include Statement Examples:
 - #include <string>
 - #include <sstream>
