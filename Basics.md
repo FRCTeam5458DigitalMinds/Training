@@ -70,7 +70,7 @@ After adding all includes and declarations, functions are created to run pieces 
 
 ## What to Put in Void Functions:  
 Void functions make up the bulk of the programming we do but are usually created bit by bit. This is because not all parts are added on the bot at once, and usually you can't program ahead of time. The first function we write code in is RobotInit.  
-# RobotInit Code:  
+### RobotInit Code:  
 This code is run once when the robot is first connected and it sets up the bot before it is driven. The first lines of code are:  
 **m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);  
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);  
