@@ -1,14 +1,4 @@
 # Basics of C++  
-
-## Starting a New Project
-To start a new project on Visual Studio Code:
-1. Click the "W" on the upper right hand corner of your screen.
-2. Click "Create a new project" in the drop-down menu.
-3. You will then be led to a project creator; you will then choose your project type (template)
-4. The language will then be cpp, and the style will be "timed robot."
-5. Choose a folder to save your code to (preferably Github), make a project name, and enter the team number (5458) 
-before generating the project.
-
 ## Commenting:  
 Comments are lines in code that act as notes or headers, where they have no effect on the code.  
 1. To make a single line comment type **//** followed by text. 
@@ -64,11 +54,9 @@ Include files (aka includes) are header files that are stated at the beginning o
 - #include <frc/ADXRS450_Gyro.h>
 - #include <frc/Solenoid.h>
 - #include <frc/smartdashboard/SmartDashboard.h>  
-
-*Note: ctre/phoenix comes from the framework "Cross the Road Electronics," which is where we get all of our motor controllers from. To access this library and avoid errors for this include statement, click the "**W**" in the upper right hand corner and click "Manage Vendor Libraries." If this is at the beginning of the season, you will have to download the updated version of the library on the CTRE website, and then click on "Install New Libraries (offline)" on VS Code. If that does not work, try "Manage Current Libraries."*
-
+  
 ## 2nd Section of Code - Declarations:  
-This section is after includes and contains all of the component and value declarations.  
+This section is after includes and contains all of the component and value declarations. This section is not surrounded by brackets.    
   
 ## 3rd Section of Code - Void Functions:  
 After adding all includes and declarations, functions are created to run pieces of code on the bot. The two main functions we use are RobotInit and RobotPeriodic, although sometimes we use others. Each function contains code that is *called*, meaning run, at a specific time on the robot:  
@@ -80,10 +68,6 @@ After adding all includes and declarations, functions are created to run pieces 
 *all code in these brackets is called on every robot packet, no matter what mode*  
 **}**  
 
-**void Robot::TestPeriodic() {**
-*all code in these brackets is called on every robot packet during testing mode*
-**}**
-
 ## What to Put in Void Functions:  
 Void functions make up the bulk of the programming we do but are usually created bit by bit. This is because not all parts are added on the bot at once, and usually you can't program ahead of time. The first function we write code in is RobotInit.  
 ### RobotInit Code:  
@@ -92,6 +76,31 @@ This code is run once when the robot is first connected and it sets up the bot b
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);  
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);**  
 I have no idea why, but its the first lines in RobotInit for our past three bots, so if its not already there I would copy-paste it.  
-The next lines we create reverse the controls for the motors on the right side of the bot, because if this is not put in, all motors turn the same way, despite facing different ways, and the bot just spins.
+All of our motors spin clockwise, so when their on the left side of the bot the wheels move forward, but since we face them the other way on the right side we have to inverse them to make sure that they also go forward. We inverse the motion of the motor by writing:  
+**RightMotorOne.SetInverted(true);  
+  RightMotorTwo.SetInverted(true);  
+  RightMotorThree.SetInverted(true);**  
+Each motor has to have its own line saying it is inversed, and its name has to match what you named it eariler when you declared it (VS Code will probably tell you if its wrong). Other pieces of code will also eventually be put into this function, such as setting Solenoids to false, put this is all you need to get started.  
+### RobotPeriodic Code:  
+This code is run on every robot packet, no matter the mode, meaning it will run whenever the bot is enabled in Driver Station. *Every lines in the code is executed several times a second while the bot is enabled,* which allows us to get the current position of our controllers, and then based on the information we can tell the bot what to do. To read the current position of the controllers, we store the controllers values in variables that we declared earlier:  
+**double JoyY = -JoyAccel1.GetY();  
+  double WheelX = RaceWheel.GetX();  
+  double XboxRightAnalogY = Xbox.GetRawAxis(5);**  
+JoyY is the input for accelerting and we inverse it because that way pushing it forward will gives it a positive value. Racewheel is the angle that the wheel is turned at. XboxRightAnalogY is used to get values used in controlling things such as the height of the elevator. The 5 represents that axis Driver Station recognizes the right joystick as.**  
+  
+When we are programming the bot to drive, we take the input values and decide what to do based on them. For example, we don't want our bot to try to go straight and spin at the same, so we use **if statements.** If statements are very simple and they are formatted like:  
+**if (inputOneIsTrue) {**  
+*runs code for input one*  
+**}  
+else if (inputTwoIsTrue) {**  
+*runs code for input two because input one was false, there can be several else if statements in a row*  
+**}  
+else {**  
+*no input was true so this runs automatically*  
+**}**  
+Every statement has only one **if** to start it and one **else** to end it, but can have as many **else if** sections as you want in between. If one of the inputs is true, it no longer goes down the list. If none of the inputs is true, it runs the code in **else.**
+
+
+
 
 
