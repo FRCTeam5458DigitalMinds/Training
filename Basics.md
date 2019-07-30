@@ -64,7 +64,9 @@ Include files (aka includes) are header files that are stated at the beginning o
 - #include <frc/ADXRS450_Gyro.h>
 - #include <frc/Solenoid.h>
 - #include <frc/smartdashboard/SmartDashboard.h>  
-  
+
+*Note: ctre/phoenix comes from the framework "Cross the Road Electronics," which is where we get all of our motor controllers from. To access this library and avoid errors for this include statement, click the "**W**" in the upper right hand corner and click "Manage Vendor Libraries." If this is at the beginning of the season, you will have to download the updated version of the library on the CTRE website, and then click on "Install New Libraries (offline)" on VS Code. If that does not work, try "Manage Current Libraries."
+
 ## 2nd Section of Code - Declarations:  
 This section is after includes and contains all of the component and value declarations.  
   
