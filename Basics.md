@@ -69,6 +69,13 @@ After adding all includes and declarations, functions are created to run pieces 
 **}**  
 
 ## What to Put in Void Functions:  
-Void functions make up the bulk of the programming we do but are usually created bit by bit. 
+Void functions make up the bulk of the programming we do but are usually created bit by bit. This is because not all parts are added on the bot at once, and usually you can't program ahead of time. The first function we write code in is RobotInit.  
+# RobotInit Code:  
+This code is run once when the robot is first connected and it sets up the bot before it is driven. The first lines of code are:  
+**m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);  
+  m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);  
+  frc::SmartDashboard::PutData("Auto Modes", &m_chooser);**  
+I have no idea why, but its the first lines in RobotInit for our past three bots, so if its not already there I would copy-paste it.  
+The next lines we create reverse the controls for the motors on the right side of the bot, because if this is not put in, all motors turn the same way, despite facing different ways, and the bot just spins.
 
 
