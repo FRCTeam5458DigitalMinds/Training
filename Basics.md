@@ -1,4 +1,14 @@
 # Basics of C++  
+
+## Starting a New Project
+To start a new project on Visual Studio Code:
+1. Click the "W" on the upper right hand corner of your screen.
+2. Click "Create a new project" in the drop-down menu.
+3. You will then be led to a project creator; you will then choose your project type (template)
+4. The language will then be cpp, and the style will be "timed robot."
+5. Choose a folder to save your code to (preferably Github), make a project name, and enter the team number (5458) 
+before generating the project.
+
 ## Commenting:  
 Comments are lines in code that act as notes or headers, where they have no effect on the code.  
 1. To make a single line comment type **//** followed by text. 
@@ -67,6 +77,10 @@ After adding all includes and declarations, functions are created to run pieces 
 **void Robot::RobotPeriodic() {**  
 *all code in these brackets is called on every robot packet, no matter what mode*  
 **}**  
+
+**void Robot::TestPeriodic() {**
+*all code in these brackets is called on every robot packet during testing mode*
+**}**
 
 ## What to Put in Void Functions:  
 Void functions make up the bulk of the programming we do but are usually created bit by bit. This is because not all parts are added on the bot at once, and usually you can't program ahead of time. The first function we write code in is RobotInit.  
