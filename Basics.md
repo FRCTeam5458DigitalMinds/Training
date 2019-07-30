@@ -61,11 +61,11 @@ This section is after includes and contains all of the component and value decla
 ## 3rd Section of Code - Void Functions:  
 After adding all includes and declarations, functions are created to run pieces of code on the bot. The two main functions we use are RobotInit and RobotPeriodic, although sometimes we use others. Each function contains code that is *called*, meaning run, at a specific time on the robot:  
 **void Robot::RobotInit() {**  
-    *all code in these brackets is called once when the robot is connected**  
+⋅⋅⋅⋅*all code in these brackets is called once when the robot is connected**  
 **}**  
   
 **void Robot::RobotPeriodic() {**  
-    *all code in these brackets is called on every robot packet, no matter what mode*  
+⋅⋅⋅⋅*all code in these brackets is called on every robot packet, no matter what mode*  
 **}**  
 
 ## What to Put in Void Functions:  
