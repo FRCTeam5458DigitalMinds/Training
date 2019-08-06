@@ -7,9 +7,9 @@ pointers on some of the most important parts of the FRC Control System.
 https://wpilib.screenstepslive.com/s/4485
 
 ## Hardware and Software Components
-**Main Hardware Components**
+### **Main Hardware Components**
 * **National Instruments roboRIO**
-  - roboRIO is the main FRC robot controller. The Integrated controller I/O includes a variety of communication protocols (Ethernet, USB, as     well as digital I/O and analog I/O channels used to connect to peripherals for sensing and control. For example, for the 2019 season, one     peripheral we used was a smart camera called a Limelight to obtain vision during the Sandstorm period of the match when drivers could not 
+  - roboRIO is the main FRC robot controller. The Integrated controller I/O includes a variety of communication protocols Ethernet, USB, as       well as digital I/O and analog I/O channels used to connect to peripherals for sensing and control. For example, for the 2019 season, one     peripheral we used was a smart camera called a Limelight to obtain vision during the Sandstorm period of the match when drivers could not 
     see the field.
 * **PDP (Power Distribution Panel)**
   - The PDP is designed to distribute power from the battery to various robot components through auto-resetting circuit breakers and a small     number of special function fused connections. The PDP provides 12V(V = voltage) connectors specifically for the roboRIO, as well as           connectors for the Voltage Regulator Module and Pneumatics Control Module, which will be mentioned later on. It also includes a CAN           interface for logging current, temperature, and battery voltage.
