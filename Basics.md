@@ -75,18 +75,19 @@ This code is run once when the robot is first connected and it sets up the bot b
 **m_chooser.SetDefaultOption(kAutoNameDefault, kAutoNameDefault);  
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);  
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);**  
-I have no idea why, but its the first lines in RobotInit for our past three bots, so if its not already there I would copy-paste it.  
-All of our motors spin clockwise, so when their on the left side of the bot the wheels move forward, but since we face them the other way on the right side we have to inverse them to make sure that they also go forward. We inverse the motion of the motor by writing:  
+I have no idea why, but its the first lines in RobotInit for our past three bots, so if its not already there I would type it in or copy-paste it.  
+All of our motors spin clockwise, so when they're on the left side of the bot, the wheels move forward, but since we face them the other way on the right side we have to inverse them to make sure that they also go forward. We inverse the motion of the motor by writing:  
 **RightMotorOne.SetInverted(true);  
   RightMotorTwo.SetInverted(true);  
   RightMotorThree.SetInverted(true);**  
+*Note that these three motors happened to be named right motor one, two, and three. You can use these names, or give your motors names of your choosing as long as they make sense when looking at the motors and their positions. It is also useful to make sure others can understand the names when looking at the robot.*
 Each motor has to have its own line saying it is inversed, and its name has to match what you named it eariler when you declared it (VS Code will probably tell you if its wrong). Other pieces of code will also eventually be put into this function, such as setting Solenoids to false, put this is all you need to get started.  
 ### RobotPeriodic Code:  
 This code is run on every robot packet, no matter the mode, meaning it will run whenever the bot is enabled in Driver Station. *Every lines in the code is executed several times a second while the bot is enabled,* which allows us to get the current position of our controllers, and then based on the information we can tell the bot what to do. To read the current position of the controllers, we store the controllers values in variables that we declared earlier:  
 **double JoyY = -JoyAccel1.GetY();  
   double WheelX = RaceWheel.GetX();  
   double XboxRightAnalogY = Xbox.GetRawAxis(5);**  
-JoyY is the input for accelerting and we inverse it because that way pushing it forward will gives it a positive value. Racewheel is the angle that the wheel is turned at. XboxRightAnalogY is used to get values used in controlling things such as the height of the elevator. The 5 represents that axis Driver Station recognizes the right joystick as.**  
+JoyY is the input for accelerating and we inverse it because that way pushing it forward will gives it a positive value. Racewheel is the angle that the wheel is turned at. XboxRightAnalogY is used to get values used in controlling things such as the height of the elevator. The 5 represents that axis Driver Station recognizes the right joystick as.**  
   
 When we are programming the bot to drive, we take the input values and decide what to do based on them. For example, we don't want our bot to try to go straight and spin at the same, so we use **if statements.** If statements are very simple and they are formatted like:  
 **if (inputOneIsTrue) {**  
