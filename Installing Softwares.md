@@ -26,6 +26,8 @@ https://wpilib.screenstepslive.com/s/4485
   - The Talon SRX motor controller is a CAN-enabled "smart motor controller" from Cross The Road Electronics/VEX Robotics. The Talon SRX can     be controlled over the CAN bus. When using the CAN bus control, this device can take inputs from limit switches and potentiometers,           encoders, or similar sensors in order to perform advanced control.
 * **Victor SPX**
   - The Victor SPX motor controller is a CAN or PWM controlled motor controller from Cross The Road Electronics/VEX Robotics. The device is       made to allow easy connection to the roboRIO PWM connectors or a CAN bus chain. When controlled over the CAN bus, the device has a number     of the closed loop features also present in the Talon SRX. The case is sealed to prevent debris from entering the controller.
+  
+### Main Software Components
  
 
 
