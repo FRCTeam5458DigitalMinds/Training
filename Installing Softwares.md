@@ -30,6 +30,8 @@ https://wpilib.screenstepslive.com/s/4485
 ### Main Software Components
 * **Visual Studio Code**
   - Visual Studio Code is the supported programming environment for C++ and Java, two of the three supported coding languages used for programming an FRC robot. 
+* **FRC Driver Station**
+  - Driver station is a software used to control the state of a robot during a competition match. This software contains the code necessary to send data to your robot from a variety of input devices such as joysticks, wheel, gamepads, and customizable IO boards.
 
 
 
